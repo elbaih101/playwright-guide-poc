@@ -5,7 +5,7 @@ Inside that directory, you can run several commands:
 ```sh
   npx playwright test
 ```
-    Runs the end-to-end tests.
+Runs the end-to-end tests.
 ```sh
   npx playwright test --ui
 ```
