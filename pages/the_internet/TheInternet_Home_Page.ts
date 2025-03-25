@@ -1,6 +1,6 @@
 import { expect, type Locator, type Page } from '@playwright/test';
-import  {BrowserAction} from "../../utils/BrowserAction"  ;
-import {ABTesting} from './ABTesting_Page'
+import { BrowserAction } from "../../utils/BrowserAction";
+import { ABTesting } from './ABTesting_Page'
 
 export class TheInternet_Home_Page {
   readonly page: Page;
@@ -22,16 +22,16 @@ export class TheInternet_Home_Page {
   }
 
   async goto() {
-   BrowserAction.goto(this.page,"https://the-internet.herokuapp.com/")
-   return this;
+    BrowserAction.goto(this.page, "https://the-internet.herokuapp.com/")
+    return this;
   }
 
   async navigateToAB() {
     await this.aBLink.first().click();
     return new ABTesting(this.page);
   }
-  async title(){
+  async title() {
     return BrowserAction.getPageTitle(this.page);
   }
 
- }
+}
