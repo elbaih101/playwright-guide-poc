@@ -1,4 +1,4 @@
-import { Locator, Page } from "@playwright/test";
+import { Locator, Page ,Browser} from "@playwright/test";
 import { ElementActions } from "../../../utils/ElmentAction";
 import { BrowserAction } from "../../../utils/BrowserAction";
 
