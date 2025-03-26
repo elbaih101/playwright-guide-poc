@@ -1,6 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test';
-import { BrowserAction } from "../../utils/BrowserAction";
+import { BrowserAction } from "../../../utils/BrowserAction";
 import { ABTesting } from './ABTesting_Page'
+import { ElementActions } from '../../../utils/ElmentAction';
 
 export class TheInternet_Home_Page {
   readonly page: Page;
@@ -27,7 +28,7 @@ export class TheInternet_Home_Page {
   }
 
   async navigateToAB() {
-    await this.aBLink.first().click();
+    await ElementActions.click(this.aBLink);
     return new ABTesting(this.page);
   }
   async title() {

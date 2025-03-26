@@ -1,5 +1,5 @@
 import { expect, type Locator, type Page } from '@playwright/test';
-import { BrowserAction } from "../../utils/BrowserAction";
+import { BrowserAction } from "../../../utils/BrowserAction";
 import { TheInternet_Home_Page } from './TheInternet_Home_Page'
 
 export class ABTesting {
