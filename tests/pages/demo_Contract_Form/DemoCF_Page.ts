@@ -1,5 +1,6 @@
 import { Locator, Page } from "@playwright/test";
 import { ElementActions } from "../../../utils/ElmentAction";
+import { BrowserAction } from "../../../utils/BrowserAction";
 
 
 export class DemoCF_Page {
@@ -31,7 +32,8 @@ export class DemoCF_Page {
 
 
     async goto(){
-        await this.page.goto(this.url);
+        await BrowserAction.goto(this.page,this.url);
+        return this;
     }
     
     async filltextInput(text:string){
